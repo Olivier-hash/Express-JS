@@ -2,7 +2,7 @@ const express = require('express')
 const app = express()
 
 app.set('view engine', 'ejs')
-
+app.use(logger);
 
 app.get('/', (req,res) =>{
     console.log('Here');
@@ -10,9 +10,10 @@ app.get('/', (req,res) =>{
                           // render method takes two parameter
                           // passing text from server to ejs
 
-    //res.download("server.js")
-    //res.json({ message: "Error"})  // json message to the server 
-    //res.send("Hi") //it sends to the data to the client
+
+                          //res.download("server.js")
+                          //res.json({ message: "Error"})  // json message to the server 
+                          //res.send("Hi") //it sends to the data to the client
 })
 
 const userRouter = require('./routes/users')
@@ -20,5 +21,11 @@ const userRouter = require('./routes/users')
 
 app.use('/users', userRouter)    // this app.use() function is for linking Routes to particular path
 
+// Middleware function
+function logger (req,res,next){
+    console.log(req.originalUrl);
+    next()
+    
+}
 
 app.listen(4000)

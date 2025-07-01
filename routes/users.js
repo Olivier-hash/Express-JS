@@ -8,6 +8,11 @@ router.get("/", (req, res)=> {
 router.get("/new", (req, res)=>{
         res.send("User New Form")
     })
-
+router.post("/", (req,res)=>{
+        res.send("Create New user")
+})    
+router.get("/:id", (req,res)=>{
+       res.send(`Get user with ID ${req.params.id}`)
+})
 
 module.exports = router;    

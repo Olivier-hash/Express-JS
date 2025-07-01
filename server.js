@@ -15,4 +15,10 @@ app.get('/', (req,res) =>{
     //res.send("Hi") //it sends to the data to the client
 })
 
+const userRouter = require('./routes/users')
+
+
+app.use('/users', userRouter)    // this app.use() function is for linking Routes to particular path
+
+
 app.listen(4000)

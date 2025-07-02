@@ -4,17 +4,17 @@ const app = express()
 app.set('view engine', 'ejs')
 app.use(logger);
 
-app.get('/', (req,res) =>{
-    console.log('Here');
-    res.render("index", {text: "World"})   // install library by npm i ejs
-                          // render method takes two parameter
-                          // passing text from server to ejs
+app.use(express.static("public"))     // install library by npm i ejs
+                                            // render method takes two parameter
+                                           // passing text from server to ejs                                                                                                            app.get('/', (req,res) =>{
+                                                                                                                                                                                        //     console.log('Here');
+                                                                                                                                                                                        //     res.render("index", {text: "World"}) 
+                                                                                                                                                                                                                // })
 
+                                         //res.download("server.js")
+                                        //res.json({ message: "Error"})  // json message to the server 
+                                       //res.send("Hi") //it sends to the data to the client
 
-                          //res.download("server.js")
-                          //res.json({ message: "Error"})  // json message to the server 
-                          //res.send("Hi") //it sends to the data to the client
-})
 
 const userRouter = require('./routes/users')
 

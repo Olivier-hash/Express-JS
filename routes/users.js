@@ -34,4 +34,10 @@ router.param("id", (req,res,next,id) =>{
 })
 
 
-module.exports = router;    
+module.exports = router;   
+//params it is meant parameter
+// Node.js methods used with CRUD 
+//  POST --> Create operation  
+//  GET ---> Read operation  
+//  PUT --> update operation 
+//  Delete --> delete operation 

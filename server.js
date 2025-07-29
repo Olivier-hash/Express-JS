@@ -21,7 +21,7 @@ const userRouter = require('./routes/users')
 
 app.use('/users', userRouter)    // this app.use() function is for linking Routes to particular path
 
-// Middleware function
+// Middleware function :  is a function that runs during the request-response cycle. It can: Access the request (req) and response (res) objects.
 function logger (req,res,next){
     console.log(req.originalUrl);
     next()

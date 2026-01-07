@@ -11,7 +11,7 @@ router.get("/new", (req, res)=>{
 router.post("/", (req,res)=>{
         res.send("Create New user")
 })    
-// Alternative clean Express code    kom
+// Alternative clean Express code    ko
 router.route("/:id")
 .get((req,res)=>{
        console.log(req.user);

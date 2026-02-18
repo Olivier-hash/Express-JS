@@ -4,7 +4,7 @@ const app = express()
 app.set('view engine', 'ejs')
 app.use(logger);
 
-app.use(express.static("public"))            // install library by npm i ejs   //
+app.use(express.static("public"))            // install library by npm i ejs   //data
                                             // render method takes two parameter
                                            // passing text from server to ejs                                                                                                            app.get('/', (req,res) =>{
                                                                                                                                                                                         //     console.log('Here');
